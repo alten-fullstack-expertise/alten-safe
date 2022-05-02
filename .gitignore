@@ -1,3 +1,4 @@
 # The Typescript build result is kept in the /lib
 lib
 node_modules
+coverage

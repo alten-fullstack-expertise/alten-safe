@@ -73,7 +73,7 @@ interface Todo {
 }
 
 // Our type checking function.
-function isATodo(obj: any): obj is Todo => {
+function isATodo(obj: any): obj is Todo {
   return 'id' in obj && 'message' in obj;
 }
 

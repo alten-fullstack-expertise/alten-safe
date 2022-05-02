@@ -16,7 +16,7 @@ type IsType = <T>(obj: any, typeCheck: (obj: any) => boolean) => ISafe<T>;
  * @param typeCheck (obj: any) => boolean, Optional, a function that can be performed on the response from a promise, to check if it is of the correct type.
  * @returns obj: { result: T | null, error: Error | null }
  */
-const safe: Safe = async <T>(promise: Promise<T>, typeCheck?: (obj: any) => boolean): Promise<ISafe<T>> => {
+export const safe: Safe = async <T>(promise: Promise<T>, typeCheck?: (obj: any) => boolean): Promise<ISafe<T>> => {
     try {
         const result = await promise; 
 
@@ -44,7 +44,7 @@ const safe: Safe = async <T>(promise: Promise<T>, typeCheck?: (obj: any) => bool
  * @param typeCheck (obj: any) => boolean, the function that checks if the passed object is of a given type.
  * @returns obj: { result: T | null, error: Error | null }
  */
-const isType: IsType = <T>(obj: any, typeCheck: (obj: any) => boolean): ISafe<T> => {
+export const isType: IsType = <T>(obj: any, typeCheck: (obj: any) => boolean): ISafe<T> => {
     if (typeCheck(obj)) return { result: obj, error: null };
     return { result: null, error: new Error("Given object did not pass type check.") };
 }

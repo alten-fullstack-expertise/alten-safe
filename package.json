@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc -w",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test": "jest --coverage"
   },
   "keywords": [
     "Promises",
@@ -21,6 +22,12 @@
   "author": "luna",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "babel-jest": "^28.0.3",
+    "isomorphic-fetch": "^3.0.0",
+    "jest": "^28.0.3",
     "typescript": "^4.4.2"
   },
   "repository": {
