@@ -1,6 +1,6 @@
 {
   "name": "alten-safe",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of function can that be wrapped around promises to simplify the process of catching errors and handling results.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
